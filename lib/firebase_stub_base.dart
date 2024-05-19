@@ -1,7 +1,2 @@
-library firebase_stub_base;
-
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/firestore_stub_base.dart';
+export 'src/firebase_auth_user_stub.dart';
