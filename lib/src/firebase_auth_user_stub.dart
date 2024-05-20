@@ -145,3 +145,15 @@ class FirebaseUserStub implements User {
   @override
   MultiFactor get multiFactor => throw Exception("not implemented");
 }
+
+class UserCredentialStub implements UserCredential {
+  @override
+  User? get user => throw Exception("not implemented");
+
+  @override
+  AdditionalUserInfo? get additionalUserInfo =>
+      throw Exception("not implemented");
+
+  @override
+  AuthCredential? get credential => throw Exception("not implemented");
+}
