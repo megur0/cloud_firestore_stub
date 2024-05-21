@@ -3,12 +3,6 @@ import 'dart:typed_data';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-// 以下のクラスのスタブ（＋必要な付属クラス）クラスとして、すべての実装をException("not implemented")としている。
-// ・FirebaseFirestore
-// ・DocumentReferenceStub
-// ・CollectionReferenceStub
-//
-// 元クラスのコンストラクタがプライベートになっているためextendsはできないためimplementで実現している。
 class FirebaseFirestoreStubBase implements FirebaseFirestore {
   @override
   Map<dynamic, dynamic> get pluginConstants =>

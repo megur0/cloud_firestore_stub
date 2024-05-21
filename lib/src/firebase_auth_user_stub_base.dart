@@ -1,9 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
-class FirebaseUserStub implements User {
-  FirebaseUserStub({this.getIdTokenStub});
-
-  final String Function()? getIdTokenStub;
+class FirebaseUserStubBase implements User {
+  FirebaseUserStubBase();
 
   @override
   String? get displayName => throw Exception("not implemented");
@@ -36,91 +34,90 @@ class FirebaseUserStub implements User {
   String? get tenantId => throw Exception("not implemented");
 
   @override
-  String get uid => "dummy uid";
+  String get uid => throw Exception("not implemented");
 
   @override
-  Future<void> delete() async => throw Exception("not implemented");
+  Future<void> delete() => throw Exception("not implemented");
 
   @override
-  Future<String?> getIdToken([bool forceRefresh = false]) async =>
-      getIdTokenStub != null ? getIdTokenStub!() : "dummy token";
+  Future<String?> getIdToken([bool forceRefresh = false]) =>
+      throw Exception("not implemented");
 
   @override
   Future<IdTokenResult> getIdTokenResult([bool forceRefresh = false]) =>
       throw Exception("not implemented");
 
   @override
-  Future<UserCredential> linkWithCredential(AuthCredential credential) async =>
+  Future<UserCredential> linkWithCredential(AuthCredential credential) =>
       throw Exception("not implemented");
 
   @override
   Future<UserCredential> linkWithProvider(
     AuthProvider provider,
-  ) async =>
+  ) =>
       throw Exception("not implemented");
 
   @override
   Future<UserCredential> reauthenticateWithProvider(
     AuthProvider provider,
-  ) async =>
+  ) =>
       throw Exception("not implemented");
 
   @override
   Future<UserCredential> reauthenticateWithPopup(
     AuthProvider provider,
-  ) async =>
+  ) =>
       throw Exception("not implemented");
 
   @override
   Future<void> reauthenticateWithRedirect(
     AuthProvider provider,
-  ) async =>
+  ) =>
       throw Exception("not implemented");
 
   @override
-  Future<UserCredential> linkWithPopup(AuthProvider provider) async =>
+  Future<UserCredential> linkWithPopup(AuthProvider provider) =>
       throw Exception("not implemented");
 
   @override
-  Future<void> linkWithRedirect(AuthProvider provider) async =>
+  Future<void> linkWithRedirect(AuthProvider provider) =>
       throw Exception("not implemented");
 
   @override
   Future<ConfirmationResult> linkWithPhoneNumber(
     String phoneNumber, [
     RecaptchaVerifier? verifier,
-  ]) async =>
+  ]) =>
       throw Exception("not implemented");
 
   @override
   Future<UserCredential> reauthenticateWithCredential(
     AuthCredential credential,
-  ) async =>
+  ) =>
       throw Exception("not implemented");
 
   @override
-  Future<void> reload() async => throw Exception("not implemented");
+  Future<void> reload() => throw Exception("not implemented");
 
   @override
   Future<void> sendEmailVerification([
     ActionCodeSettings? actionCodeSettings,
-  ]) async =>
+  ]) =>
       throw Exception("not implemented");
 
   @override
-  Future<User> unlink(String providerId) async =>
+  Future<User> unlink(String providerId) => throw Exception("not implemented");
+
+  @override
+  Future<void> updateEmail(String newEmail) =>
       throw Exception("not implemented");
 
   @override
-  Future<void> updateEmail(String newEmail) async =>
+  Future<void> updatePassword(String newPassword) =>
       throw Exception("not implemented");
 
   @override
-  Future<void> updatePassword(String newPassword) async =>
-      throw Exception("not implemented");
-
-  @override
-  Future<void> updatePhoneNumber(PhoneAuthCredential phoneCredential) async =>
+  Future<void> updatePhoneNumber(PhoneAuthCredential phoneCredential) =>
       throw Exception("not implemented");
 
   @override
@@ -139,14 +136,14 @@ class FirebaseUserStub implements User {
   Future<void> verifyBeforeUpdateEmail(
     String newEmail, [
     ActionCodeSettings? actionCodeSettings,
-  ]) async =>
+  ]) =>
       throw Exception("not implemented");
 
   @override
   MultiFactor get multiFactor => throw Exception("not implemented");
 }
 
-class UserCredentialStub implements UserCredential {
+class UserCredentialStubBase implements UserCredential {
   @override
   User? get user => throw Exception("not implemented");
 
