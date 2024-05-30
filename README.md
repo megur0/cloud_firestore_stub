@@ -1,31 +1,26 @@
 # This is a private package
 
 # このパッケージの目的
-* Firebaseに関わるテストをする際に汎用的に利用可能なスタブを定義したパッケージ
+* Firestoreに関わるテストをする際に汎用的に利用可能なスタブを定義したパッケージ
 
 # スタブのベースとなるクラス
 * 以下のクラスを定義。すべての実装はException("not implemented")としている。
 * 元クラスのコンストラクタがプライベートになっているためextendsはできないためこれらのクラスを用意した。
-* Firestore関連
-    * FirebaseFirestoreStubBase
-        * FirebaseFirestoreを実装
-    * DocumentReferenceStubBase
-        * DocumentReferenceを実装
-    * CollectionReferenceStubBase
-        * CollectionReferenceを実装
-    * DocumentSnapshotStubBase
-        * DocumentSnapshotを実装
-    * QuerySnapshotStubBase
-        * QuerySnapshotを実装
-    * QueryDocumentSnapshotStubBase
-        * QueryDocumentSnapshotを実装
-    * DocumentChangeStubBase
-        * DocumentChangeを実装
-* Firebase auth可憐
-    * FirebaseUserStubBase
-        * Userを実装
-    * UserCredentialStubBase
-        * UserCredentialを実装
+* FirebaseFirestoreStubBase
+    * FirebaseFirestoreを実装
+* DocumentReferenceStubBase
+    * DocumentReferenceを実装
+* CollectionReferenceStubBase
+    * CollectionReferenceを実装
+* DocumentSnapshotStubBase
+    * DocumentSnapshotを実装
+* QuerySnapshotStubBase
+    * QuerySnapshotを実装
+* QueryDocumentSnapshotStubBase
+    * QueryDocumentSnapshotを実装
+* DocumentChangeStubBase
+    * DocumentChangeを実装
+
 
 # Firestoreのスタブ
 * snapshot, getメソッドの戻り値をスタブ化する。
