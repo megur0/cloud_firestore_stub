@@ -9,6 +9,12 @@ environment:
 
 dependencies:
   cloud_firestore: 4.15.8
+  
+  # 4.15.8のcloud_firestoreが、6.2.0 で eprecatedとなった引数を参照するためcloud_firestore_platform_interfaceのバージョンを固定
+  # https://github.com/firebase/flutterfire/blob/master/packages/cloud_firestore/cloud_firestore_platform_interface/CHANGELOG.md#620
+  # cloud_firestore_platform_interface: ^6.1.9
+  cloud_firestore_platform_interface: ">=6.1.9 < 6.2.0" 
+  
   firebase_core: ^2.27.0
   flutter:
     sdk: flutter
